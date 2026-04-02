@@ -31,7 +31,7 @@ AUTH_CODE:APP_NAME:APP_URL,AUTH_CODE:APP_NAME:APP_URL
 Example:
 
 ```text
-ABC12345:circuit:https://circuit.example.com,XYZ98765:flightradar:https://flightradar.example.com
+ABC00000:circuit:https://circuit.example.com,XYZ98765:flightradar:https://flightradar.example.com
 ```
 
 Default CORS behavior allows browser requests from:
