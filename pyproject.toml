@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "result-storage"
+version = "0.1.0"
+description = "FastAPI service for uploading zip files to S3"
+authors = ["adroh"]
+packages = [{include = "app"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.135.2"
+uvicorn = {extras = ["standard"], version = "^0.42.0"}
+python-multipart = "^0.0.22"
+boto3 = "^1.42.80"
+pydantic-settings = "^2.13.1"
+pyyaml = "^6.0.3"
+
+
+[tool.poetry.scripts]
+dev = "app.cli:dev"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
