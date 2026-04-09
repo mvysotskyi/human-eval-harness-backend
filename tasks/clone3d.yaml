@@ -3,7 +3,7 @@ test_cases:
   description: |-
     easy
   prompt: |-
-    Open the Four Objects Scene, then set the color of all elements to red (255, 0, 0) - one by one.
+    Open the **Four Objects Scene**, then set the **cube** color to **blue (0, 0, 255)** and the **sphere** color to **green (0, 255, 0)**. After that, move the **cylinder** along the **Z-axis** to the same position as the **cone**, without changing its rotation or scale.
   gt: {}
 - id: "tc_clone3d_002"
   description: |-
