@@ -1,11 +1,9 @@
 test_cases:
 - id: "tc_graph_001"
   description: |-
-    Open the workflow named **"API Data Pipeline"** and insert a **Wait** node between the **HTTP Request** and **Map** nodes. Configure it to wait **1 second**, then reconnect the workflow so the execution order becomes **HTTP Request → Wait → Map**.
-  description: |-
-    Open the workflow named **"Order Processing Pipeline"** and insert a Filter node between the Database Connector and the If node.
+    Open the workflow named **"API Data Pipeline"** and insert a **Wait** node between the **HTTP Request** and **Map** nodes. Configure it to wait **1 second**, then reconnect the workflow so the execution order becomes **HTTP Request -> Wait -> Map**.
   prompt: |-
-    Open the workflow named **"Order Processing Pipeline"** and insert a Filter node between the Database Connector and the If node. Configure the filter to only pass orders where `status === 'completed'`.
+    Open the workflow named **"API Data Pipeline"** and insert a **Wait** node between the **HTTP Request** and **Map** nodes. Configure it to wait **1 second**, then reconnect the workflow so the execution order becomes **HTTP Request -> Wait -> Map**.
   gt: {}
 - id: "tc_graph_003"
   description: |-
