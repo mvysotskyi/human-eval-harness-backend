@@ -4,7 +4,7 @@ Small FastAPI service for:
 
 - validating auth codes against a configured app map
 - serving testcase prompts from the local `tasks/` directory
-- storing testcase state and uploaded ZIP files in S3
+- storing testcase state and uploading files to S3
 
 ## Runtime configuration
 
@@ -75,19 +75,6 @@ Why App Runner fits this app:
    - `AUTH_CODE_MAP`
 
 For production, treat `AUTH_CODE_MAP` as sensitive because it contains the auth codes. App Runner supports reading secrets and parameters into environment variables, so prefer AWS Systems Manager Parameter Store or AWS Secrets Manager over plain text service config.
-
-### App Runner from source code
-
-Use this path if the repository is in GitHub or Bitbucket and you want App Runner to build from source.
-
-1. Push this repository to GitHub or Bitbucket.
-2. In App Runner, create a service from a source repository.
-3. Point the service at the repository root so App Runner picks up `apprunner.yaml`.
-4. Set the health check path to `/health`.
-5. Attach the instance role with S3 permissions.
-6. Deploy.
-
-The checked-in `apprunner.yaml` is intentionally set up for App Runner's Python 3.11 managed runtime. It installs dependencies in `run.pre-run`, which matches AWS's current guidance for the revised Python 3.11 build process.
 
 ### App Runner from ECR
 
